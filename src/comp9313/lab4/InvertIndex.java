@@ -192,7 +192,7 @@ public class InvertIndex {
 		job.setJarByClass(InvertIndex.class);
 	
 		job.setMapperClass(InvertIndexMapper.class);
-		//job.setCombinerClass(NSPairReducer.class);
+		//job.setCombinerClass(InvertIndexReducer.class);
 		job.setReducerClass(InvertIndexReducer.class);
 		job.setPartitionerClass(MyPartition.class);
 		job.setOutputKeyClass(Pair.class);

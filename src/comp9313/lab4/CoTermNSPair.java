@@ -127,18 +127,6 @@ public class CoTermNSPair {
 				String term1 = termArray.get(i);
 				for(int j=i+1;j<termArray.size();j++){
 					String term2 = termArray.get(j);
-					//This is for symmetric computation 
-					/*if(term1.compareTo(term2) < 0){
-						word.set(term1 + " " + term2);						
-					}else{
-						word.set(term2 + " " + term1);
-					}*/
-					
-					//This is for nonsymmetric computation
-					//word.set(term1 + " " + term2);
-					//context.write(word, one);
-					//word.set(term1 + " " + "*" );
-					//context.write(word, one);
 					
 					Pair out1 = new Pair(new Text(term1), new Text(term2));
 					Pair out2 = new Pair(new Text(term1), new Text("*"));
